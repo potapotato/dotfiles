@@ -49,6 +49,7 @@ alias lla="lsd -la"
 test -f ~/.zshrc.local && source ~/.zshrc.local
 
 # functions
+source $DOTFILES/functions/*
 fd() {
   local dir
   dir=$(find ${1:-.} -path '*/\.*' -prune \

@@ -2,7 +2,7 @@
     links:
       relinks: true
 
-- clean: ['~']
+- clean: ['~', '~/.config']
 
 - link:
     "~/.bashrc": bash/bashrc
@@ -11,7 +11,7 @@
     "~/.config/Code - OSS/User/keybindings.json": vscode/keybindings.json
     "~/.config/Code - OSS/User/settings.json": vscode/settings.json
     "~/.vsvimrc": vscode/vsvimrc
-    "~/.config/lsd/": zsh/lsd
+    "~/.config/lsd/": cli/lsd
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
