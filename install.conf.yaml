@@ -1,0 +1,17 @@
+- defaults:
+    links:
+      relinks: true
+
+- clean: ['~']
+
+- link:
+    "~/.bashrc": bash/bashrc
+    "~/.zshrc": zsh/zshrc.zsh
+    "~/.vimrc": vim/vimrc
+    "~/.config/Code - OSS/User/keybindings.json": vscode/keybindings.json
+    "~/.config/Code - OSS/User/settings.json": vscode/settings.json
+    "~/.vsvimrc": vscode/vsvimrc
+    "~/.config/lsd/": zsh/lsd
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
