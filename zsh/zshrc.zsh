@@ -6,9 +6,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # environment variables
-#export BAT_THEME="OneHalfLight"
 export BAT_THEME="Monokai Extended Bright"
-export LS_COLORS="$(vivid generate gruvbox-light)"
+export LS_COLORS="$(vivid generate dracula)"
 export EDITOR="vim"
 export DOTFILES="$HOME/.dotfiles"
 
@@ -46,6 +45,9 @@ alias la="lsd -a"
 alias ll="lsd -l"
 alias lla="lsd -la"
 
+# local file
+test -f ~/.zshrc.local && source ~/.zshrc.local
+
 # functions
 fd() {
   local dir
@@ -53,3 +55,6 @@ fd() {
 				  -o -type d -print 2> /dev/null | fzf +m) &&
   cd "$dir"
 }
+
+
+

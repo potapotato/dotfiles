@@ -1,2 +1,4 @@
 set nu
 syntax on
+map H ^
+map L $
