@@ -2,3 +2,14 @@ set nu
 syntax on
 map H ^
 map L $
+set showmatch
+set ignorecase
+set smartcase
+set incsearch
+set ruler
+set hlsearch
+set autochdir
+set smartindent
+set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
+set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\ %l,\ Col\ %c/%L%) " 设置在状态行显示的信息
+

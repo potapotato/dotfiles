@@ -44,18 +44,12 @@ alias ls="lsd"
 alias la="lsd -a"
 alias ll="lsd -l"
 alias lla="lsd -la"
+alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"  
+
 
 # local file
 test -f ~/.zshrc.local && source ~/.zshrc.local
 
 # functions
 source $DOTFILES/functions/*
-fd() {
-  local dir
-  dir=$(find ${1:-.} -path '*/\.*' -prune \
-				  -o -type d -print 2> /dev/null | fzf +m) &&
-  cd "$dir"
-}
-
-
 
