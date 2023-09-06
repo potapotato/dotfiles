@@ -5,7 +5,8 @@ test -f ~/.zshrc.local && sed -i 's/BAT_THEME=.*/BAT_THEME="Monokai Extended Bri
 test -f ~/.zshrc.local && sed -i 's/LS_COLORS=.*/LS_COLORS="$(vivid generate jellybeans)"/' ~/.zshrc.local
 test -f ~/.zshrc.local && source ~/.zshrc.local
 
-test -f ~/.config/lsd/config.yaml && sed -i 's/theme:.*/theme: hardhacker/' ~/.config/lsd/config.yaml
+#test -f ~/.config/lsd/config.yaml && sed -i 's/theme:.*/theme: hardhacker/' ~/.config/lsd/config.yaml
+test -f ~/.config/lsd/config.yaml && cp ~/.config/lsd/themes/hardhacker.yaml ~/.config/lsd/colors.yaml
 
 
 
