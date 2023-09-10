@@ -9,7 +9,7 @@ fi
 export BAT_THEME="Monokai Extended Bright"
 export LS_COLORS="$(vivid generate dracula)"
 export EDITOR="vim"
-export DOTFILES="$HOME/dotfiles"
+export DOTFILES="$HOME/.dotfiles"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -22,8 +22,8 @@ source $DOTFILES/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $DOTFILES/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $DOTFILES/zsh/autojump/bin/autojump.zsh
 source $DOTFILES/zsh/powerlevel10k/powerlevel10k.zsh-theme
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+source $DOTFILES/zsh/fzf/shell/key-bindings.zsh
+source $DOTFILES/zsh/fzf/shell/completion.zsh
 
 bindkey -v
 # End of lines configured by zsh-newuser-install
@@ -39,11 +39,15 @@ compinit
 
 # alias
 alias n="neofetch | lolcat"
-alias cat="bat"
-alias ls="lsd"
-alias la="lsd -a"
-alias ll="lsd -l"
-alias lla="lsd -la"
+if type bat >/dev/null 2>&1; then 
+    alias cat="bat"
+fi
+if type lsd >/dev/null 2>&1; then 
+    alias ls="lsd"
+    alias la="lsd -a"
+    alias ll="lsd -l"
+    alias lla="lsd -la"
+fi
 alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"  
 
 

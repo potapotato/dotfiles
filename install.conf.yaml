@@ -12,7 +12,7 @@
     "~/.config/Code/User/settings.json": vscode/settings.json
     "~/.vsvimrc": vscode/vsvimrc
     "~/.config/lsd/": cli/lsd
-    "~/.tmux.conf": tmux/tmux.conf
+    "~/.config/tmux/": tmux
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

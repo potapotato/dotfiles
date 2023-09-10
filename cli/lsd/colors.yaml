@@ -1,27 +1,29 @@
-user: cyan
-group: yellow
+# A theme for the lsd utility. Based on the Solarized color theme.
+# Made for Solarized-base terminal themes, but works well with most light themes.
+user: 136
+group: 245
 permission:
-  read: green
-  write: yellow
-  exec: red
-  exec-sticky: magenta
-  no-access: dark_grey
-  octal: cyan
-  acl: cyan
-  context: cyan
+  read: 64
+  write: 136
+  exec: 160
+  exec-sticky: 125
+  no-access: 234
+  octal: 37
+  acl: 37
+  context: 234
 date:
-  hour-old: grey
-  day-old: grey
-  older: dark_grey
+  hour-old: 64
+  day-old: 136
+  older: 240
 size:
-  none: green
-  small: green
-  medium: green
-  large: green
+  none: 234
+  small: 37
+  medium: 61
+  large: 33
 inode:
-  valid: blue
-  invalid: dark_grey
+  valid: 61
+  invalid: 234
 links:
-  valid: blue
-  invalid: dark_grey
-tree-edge: dark_grey
+  valid: 61
+  invalid: 234
+tree-edge: 234
