@@ -25,7 +25,10 @@ source $DOTFILES/zsh/powerlevel10k/powerlevel10k.zsh-theme
 source $DOTFILES/zsh/fzf/shell/key-bindings.zsh
 source $DOTFILES/zsh/fzf/shell/completion.zsh
 
-bindkey -v
+
+export VISUAL=vim
+autoload edit-command-line; zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename "~/.zshrc"
