@@ -9,7 +9,7 @@ fi
 export BAT_THEME="Monokai Extended Bright"
 export LS_COLORS="$(vivid generate dracula)"
 export EDITOR="vim"
-export DOTFILES="$HOME/.dotfiles"
+export DOTFILES="$HOME/dotfiles"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
