@@ -1,15 +1,38 @@
 set nu
+set relativenumber
 syntax on
-map H ^
-map L $
-set showmatch
+
+" 突出当前行
+set cursorline
+" 自动换行
+set wrap
+" 显示输入的命令
+set showcmd
+
+" 高亮查找结果
+set hlsearch
+" 增量搜索高亮
+set incsearch
+" 搜索忽略大小写
 set ignorecase
 set smartcase
-set incsearch
+
+" 输入命令提示
+set wildmenu
+
+set showmatch
 set ruler
-set hlsearch
+
 set autochdir
 set smartindent
+
 set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
-set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\ %l,\ Col\ %c/%L%) " 设置在状态行显示的信息
+set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\ %l,\ Col\ %c/%L%) " 设置在状态行显示的 信息
+
+" 快捷键
+map H ^
+map L $
+
+vnoremap <Leader>y "+y
+nmap <Leader>p "+p
 
